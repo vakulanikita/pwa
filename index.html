@@ -12,10 +12,20 @@
 <body>
   <h1>PWA</h1>
 
+  <button class="btn__notif">send notification</button>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js')
     }
+
+    const button = document.querySelector('.btn__notif')
+    button.addEventListener('click', () => {
+      Notification.requestPermission().then(perm => {
+        const notification = new Notification("Example notification", {
+          body: Math.random()
+        })
+      })
+    })
   </script>
 </body>
 

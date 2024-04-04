@@ -452,7 +452,7 @@
       "sizes": "1024x1024"
     }
   ],
-  "thene_color": "#000000",
+  "theme_color": "#000000",
   "background_color": "#FFFFFF",
   "display": "fullscreen",
   "orientation": "portrait"
