@@ -7,8 +7,8 @@ const port = 3000
 
 const apiKeys = {
   publicKey:
-    '',
-  privateKey: '',
+    'BPOtKoIcXFN-aMtMjlG8mvvHOrz9ZRUAuMbFe0mOSFNcBDczfVAdLJhVHFFv9sRzuNA07k07HQ2WnzLxCGWTvMo',
+  privateKey: 'HIFS5EHNisg7-xhU1Zok-MzrUW73kzhU007DjZxLTCE',
 }
 
 webpush.setVapidDetails(
