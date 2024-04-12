@@ -8,12 +8,26 @@
   <link rel="shortcut icon" href="images/android/android-launchericon-192-192.png?v=1">
   <link rel="manifest" href="manifest.json">
 
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <!-- <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(function (OneSignal) {
       OneSignal.init({
         appId: "8bf1266d-5569-41a2-a5ad-58b35c8c589c",
+      });
+    });
+  </script> -->
+
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function(OneSignal) {
+      OneSignal.init({
+        appId: "c0c3bfdc-a53b-42f5-8738-3b59a5407ee6",
+        safari_web_id: "web.onesignal.auto.3182d724-6e8d-450b-a283-f7f35292ae01",
+        notifyButton: {
+          enable: true,
+        },
       });
     });
   </script>
@@ -23,9 +37,12 @@
   <h1>PWA</h1>
 
   <!-- <button onclick="main()">send notification</button> -->
-  <button id="btn">install PWA</button>
-
-  <script>
+  
+  <button id="btn2" onclick="main()">open push prompt</button>
+  
+  <!-- PWA request script -->
+  <!-- <button id="btn">install PWA</button> -->
+  <!-- <script>
     // Initialize deferredPrompt for use later to show browser install prompt.
     let deferredPrompt;
 
@@ -56,14 +73,15 @@
 
     window.addEventListener('appinstalled', () => {
       // Hide the app-provided install promotion
-      hideInstallPromotion();
+      // hideInstallPromotion();
       // Clear the deferredPrompt so it can be garbage collected
       deferredPrompt = null;
       // Optionally, send analytics event to indicate successful install
       console.log('PWA was installed');
     });
-  </script>
-  <!-- <script src="./script.js"></script> -->
+  </script> -->
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
