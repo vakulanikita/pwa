@@ -31,6 +31,8 @@ self.addEventListener('activate', async (e) => {
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(PUBLIC_KEY),
   })
+  console.log(subscription);
+  return
 
   const response = await saveSubscription(subscription)
   console.log(response)

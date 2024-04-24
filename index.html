@@ -21,7 +21,7 @@
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(function(OneSignal) {
+    OneSignalDeferred.push(function (OneSignal) {
       OneSignal.init({
         appId: "c0c3bfdc-a53b-42f5-8738-3b59a5407ee6",
         safari_web_id: "web.onesignal.auto.3182d724-6e8d-450b-a283-f7f35292ae01",
@@ -37,9 +37,10 @@
   <h1>PWA</h1>
 
   <!-- <button onclick="main()">send notification</button> -->
-  
+
   <button id="btn2" onclick="main()">open push prompt</button>
-  
+  <div id="output"></div>
+  <button class="testBtn">test btn</button>
   <!-- PWA request script -->
   <!-- <button id="btn">install PWA</button> -->
   <!-- <script>
@@ -80,7 +81,8 @@
       console.log('PWA was installed');
     });
   </script> -->
-
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
 </body>
 
