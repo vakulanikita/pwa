@@ -36,11 +36,22 @@ const main = async () => {
 // A $( document ).ready( ) block.
 $(document).ready(async function () {
   $('.testBtn').on('click', () => {
-    console.log('handle click btn');
-    console.log(OneSignal.User.PushSubscription.id);
-    console.log(OneSignal.User.PushSubscription.token);
+    console.log('handle click btn')
+    console.log(OneSignal.User.PushSubscription.id)
+    console.log(OneSignal.User.PushSubscription.token)
   })
-  
+
+  navigator.permissions
+    .query({ name: 'notifications' })
+    .then(function (permission) {
+      // Initial status is available at permission.state
+      console.log(permission)
+      permission.onchange = function () {
+        console.log(permission)
+        // Whenever there's a change, updated status is available at this.state
+      }
+    })
+
   // window.screen.
   // screen.orientation
   //   .lock('natural')
