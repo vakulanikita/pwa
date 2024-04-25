@@ -18,7 +18,7 @@
     });
   </script> -->
 
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <!-- <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(function (OneSignal) {
@@ -30,8 +30,19 @@
         },
       });
     });
-  </script>
+  </script> -->
+
+  <!-- second app -->
   <div class='onesignal-customlink-container'></div>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function (OneSignal) {
+      OneSignal.init({
+        appId: "43e4d1af-a6c6-420d-8364-a8043305be08",
+      });
+    });
+  </script>
 </head>
 
 <body>
