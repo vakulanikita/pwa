@@ -30,7 +30,7 @@ const requestNotificationPermission = async () => {
 const main = async () => {
   checkPermission()
   await requestNotificationPermission()
-  await registerSW()
+  // await registerSW()
 }
 
 // A $( document ).ready( ) block.
