@@ -31,7 +31,7 @@ self.addEventListener('activate', async (e) => {
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(PUBLIC_KEY),
   })
-  console.log(subscription);
+  console.log(subscription)
   return
 
   const response = await saveSubscription(subscription)
@@ -41,3 +41,17 @@ self.addEventListener('activate', async (e) => {
 self.addEventListener('push', (e) => {
   self.registration.showNotification('Wohoo!!', { body: e.data.text() })
 })
+
+// self.addEventListener('fetch', function (event) {
+//   console.log('fetch event');
+//   event.respondWith(
+//     caches 
+//       .match(event.request, {
+//         // **ignoreSearch: true**
+//       })
+//       .then(function (response) {
+//         console.log(event.request);
+//         return response || fetch(event.request)
+//       })
+//   )
+// })

@@ -97,6 +97,22 @@
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
     integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
+  <script>
+    // Initialize the agent on page load.
+    const fpPromise = import('https://fpjscdn.net/v3/c2mumxKIFmBEvumJ445k')
+      .then(FingerprintJS => FingerprintJS.load({
+        region: "eu"
+      }))
+
+    // Get the visitorId when you need it.
+    fpPromise
+      .then(fp => fp.get())
+      .then(result => {
+        const visitorId = result.visitorId
+        console.log(visitorId)
+      })
+
+  </script>
 </body>
 
 </html>
