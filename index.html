@@ -108,10 +108,29 @@
     fpPromise
       .then(fp => fp.get())
       .then(result => {
+        console.log(result);
         const visitorId = result.visitorId
-        console.log(visitorId)
         alert(visitorId)
       })
+
+    // Initialize the agent at application startup.
+    // If you're using an ad blocker or Brave/Firefox, this import will not work.
+    // Please use the NPM package instead: https://t.ly/ORyXk
+    const fpPromise2 = import('https://openfpcdn.io/fingerprintjs/v4')
+      .then(FingerprintJS => FingerprintJS.load())
+
+    // Get the visitor identifier when you need it.
+    fpPromise2
+      .then(fp => fp.get())
+      .then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId
+        console.log(result)
+        alert(visitorId)
+      })
+  </script>
+
+  <script>
 
   </script>
 </body>
